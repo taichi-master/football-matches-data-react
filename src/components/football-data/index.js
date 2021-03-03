@@ -1,9 +1,12 @@
 
 import React, { Component } from "react";
 import "./index.css";
+import { getFootballCompetitions } from '../../models/actions';
+import { connect } from 'react-redux'
+
 const classNames = require('classnames');
 
-export default class FootballMatchesData extends Component {
+class FootballMatchesData extends Component {
 
   constructor(props) {
     super(props);
@@ -14,6 +17,7 @@ export default class FootballMatchesData extends Component {
 
   onClick = (year) => (e) => {
     // Code written in next line is to take care of adding active class to selected year for css purpose.
+    this.props.getFootballCompetitions( year )
     this.setState({
       selectedYear: year
     })
@@ -56,3 +60,13 @@ export default class FootballMatchesData extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    data: state.data,
+  }
+}
+
+const mapDispatchToProps = { getFootballCompetitions }
+
+export default connect(mapStateToProps, mapDispatchToProps)(FootballMatchesData)

@@ -1,0 +1,66 @@
+<testsuites name="jest tests" tests="4" failures="4" time="14.943">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2021-03-03T15:52:12" time="14.943" tests="4">
+    <testcase classname=" initial UI is rendered as expected" name=" initial UI is rendered as expected" time="0.025">
+      <failure>Error: expect(received).toBe(expected)
+
+Expected value to be (using ===):
+  null
+Received:
+  &lt;div class=&quot;total-matches&quot; data-testid=&quot;total-matches&quot; /&gt;
+
+Difference:
+
+  Comparing two different types of values. Expected null but received object.
+    at Object.&lt;anonymous&gt; (/Users/sing/Documents/projects/sandbox/test/src/App.test.js:18:42)
+    at Object.asyncFn (/Users/sing/Documents/projects/sandbox/test/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /Users/sing/Documents/projects/sandbox/test/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/sing/Documents/projects/sandbox/test/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /Users/sing/Documents/projects/sandbox/test/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and no results found" name=" search is made on by clicking on search button and no results found" time="4.678">
+      <failure>Error: expect(received).toBe(expected)
+
+Expected value to be (using ===):
+  null
+Received:
+  &lt;div class=&quot;total-matches&quot; data-testid=&quot;total-matches&quot; /&gt;
+
+Difference:
+
+  Comparing two different types of values. Expected null but received object.
+    at /Users/sing/Documents/projects/sandbox/test/src/App.test.js:32:44
+    at runExpectation (/Users/sing/Documents/projects/sandbox/test/node_modules/wait-for-expect/lib/index.js:49:25)
+    at Timeout.callback [as _onTimeout] (/Users/sing/Documents/projects/sandbox/test/node_modules/jsdom/lib/jsdom/browser/Window.js:523:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and result found - test 1" name=" search is made on by clicking on search button and result found - test 1" time="4.693">
+      <failure>Error: expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  Total matches: 3
+Received:
+
+    at /Users/sing/Documents/projects/sandbox/test/src/App.test.js:48:44
+    at runExpectation (/Users/sing/Documents/projects/sandbox/test/node_modules/wait-for-expect/lib/index.js:49:25)
+    at Timeout.callback [as _onTimeout] (/Users/sing/Documents/projects/sandbox/test/node_modules/jsdom/lib/jsdom/browser/Window.js:523:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and result found - test 2" name=" search is made on by clicking on search button and result found - test 2" time="4.639">
+      <failure>Error: expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  Total matches: 2
+Received:
+
+    at /Users/sing/Documents/projects/sandbox/test/src/App.test.js:67:44
+    at runExpectation (/Users/sing/Documents/projects/sandbox/test/node_modules/wait-for-expect/lib/index.js:49:25)
+    at Timeout.callback [as _onTimeout] (/Users/sing/Documents/projects/sandbox/test/node_modules/jsdom/lib/jsdom/browser/Window.js:523:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
