@@ -4,7 +4,7 @@ const initState = {
   isFetching: false,
   didInvalidate: false,
   year: null,
-  data: []
+  data: {}
 }
 
 export default ( state = initState, action ) => {
@@ -13,10 +13,10 @@ export default ( state = initState, action ) => {
     return { ...state, isFetching: true, didInvalidate: false, year: action.year }
 
   case types.GET_FOOTBALL_COMPETITIONS_SUCCESS:
-    return { ...state, isFetching: false, didInvalidate: false, data: action.FOOTBALL_COMPETITIONS }
+    return { ...state, isFetching: false, didInvalidate: false, data: action.data }
 
   case types.GET_FOOTBALL_COMPETITIONS_FAILURE:
-    return { ...state, isFetching: false, didInvalidate: true, data: [] }
+    return { ...state, isFetching: false, didInvalidate: true, data: {} }
 
   default:
     return state

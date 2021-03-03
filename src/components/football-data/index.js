@@ -24,6 +24,10 @@ class FootballMatchesData extends Component {
 
   render() {
     var years= [2011, 2012, 2013, 2014, 2015, 2016, 2017];
+    const { data: { data = [], total }, year } = this.props
+
+    console.log(year, data)
+
     return (
       <div className="layout-row">
         <div className="section-title">Select Year</div>
@@ -46,14 +50,21 @@ class FootballMatchesData extends Component {
 
         <section className="content">
           <section>
-            <div className="total-matches" data-testid="total-matches"></div>
+            <div className="total-matches" data-testid="total-matches">{total}</div>
             
             <ul className="mr-20 matches styled" data-testid="match-list">
-              <li className="slide-up-fade-in"> </li>
+              {
+                data.length > 0 && data.map((x, i) =>
+                  <li className="slide-up-fade-in" key={i}>{x.name}</li>
+                )
+              }
             </ul>
           </section>
 
-          <div data-testid="no-result" className="slide-up-fade-in no-result"></div>
+          {
+            data.length === 0 &&
+              <div data-testid="no-result" className="slide-up-fade-in no-result"></div>
+          }
         </section>
       </div>
     );
@@ -63,6 +74,7 @@ class FootballMatchesData extends Component {
 const mapStateToProps = (state) => {
   return {
     data: state.data,
+    year: state.year
   }
 }
 
